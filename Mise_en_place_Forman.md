@@ -16,7 +16,7 @@ Création: 27/04/2020
   - [Installation de Forman Installer](#Installation-de-Forman-Installer)
 - **[Intégration d'hôtes dans Foreman](#Intégration-d'hôtes-dans-Foreman)**
 - **[Création d'un groupe d'hôtes](#Création-d'un-groupe-d'hôtes)**
-- **[Installation des modules Puppet et plugings nécessaires)(#Installation-des-modules-Puppet-et-plugings-nécessaires)**
+- **[Installation des modules Puppet et plugings nécessaires](#Installation-des-modules-Puppet-et-plugings-nécessaires)**
   - [Installation du module ntp](#Installation-du-module-ntp)
   - [Installation du plugin foreman_remote_execution](#Installation-du-plugin-foreman-remote-execution)
 - **[Sources](#Sources)**
