@@ -1,2 +1,2 @@
 # Notes
-Notes et articles systèmes et sécurité
+Notes et articles systèmes
