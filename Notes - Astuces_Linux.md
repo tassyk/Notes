@@ -43,8 +43,10 @@ Afficher directement la table des processus et les variables système du noyau
 - Partitions
       ```$ cat partitions```
 - Afficher la structure d'un processus (1)
-    ```$ cd 1
-    $ ls -l```
+    ```
+    $ cd 1
+    $ ls -l
+    ```
 - Afficher l'environnement du processus
       `$ cat self/environ |tr '\0' '\n'`
 -  Comparer la sortie de ps avec la table des processus
