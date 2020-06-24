@@ -30,7 +30,9 @@ Les Makefiles rendent toutes les opérations (as slmt gcc) plus rapides et plus 
 
 ###  Déterminer une utilisation intensive de votre système de fichier à l'aide d'un alias
 - A placer dans .profile, puis a exécuter partout
+      ```
       alias ducks='du -cksh * | sort -rn | head -11'
+      ```
 
 ###  Manipuler /proc
 Afficher directement la table des processus et les variables système du noyau
