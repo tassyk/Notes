@@ -37,14 +37,14 @@ Les Makefiles rendent toutes les opérations (as slmt gcc) plus rapides et plus 
 ###  Manipuler /proc
 Afficher directement la table des processus et les variables système du noyau
 - version du noyau
-      $ cat verion
+     ```$ cat version```
 - Taille de la RAM utilisée
-    $ ls -l kcore
+    ```$ ls -l kcore```
 - Partitions
-      $ cat partitions
+      ```$ cat partitions```
 - Afficher la structure d'un processus (1)
-    `$ cd 1
-    $ ls -l`
+    ```$ cd 1
+    $ ls -l```
 - Afficher l'environnement du processus
       `$ cat self/environ |tr '\0' '\n'`
 -  Comparer la sortie de ps avec la table des processus
