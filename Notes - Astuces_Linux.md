@@ -72,15 +72,15 @@ NB: pgrep fonctionne comme pkill mais n'affiche que les PID
 
 ###  Gérer les ressources systèmes par process
 - Limiter le nombre max de fichiers à utliser par un processus
-      $ ulimite -f 100
+      ```$ ulimite -f 100```
 
 ###  Fermer l'accès complètement au départ d'un utilisateur
 - 1ère étape judicieuse: blocage du compte par un mot de passe
-      $ passwd -l *utilisateur*
+      ```$ passwd -l *utilisateur*```
 - Autre étape bien connue: changer le shell de connexion de l'utilisateur en un autre qui se termine immédiatement:
-      $ chsh -s /bin/true *utilisateur*
+      ```$ chsh -s /bin/true *utilisateur*```
 NB: En cas d'une auth par clé, l'utilisateur peut effectuer par contre une redirection ssh pour se connecter. Par exeple:
-      $ ssh -f -N -L8000:priv.intranet.server.com:80 ancien.server.com
+      ```$ ssh -f -N -L8000:priv.intranet.server.com:80 ancien.server.com```
 - Supprimer alors les fichiers ci-dessous s'ils existent et empêcher le d'utiliser sa clé ssh.
        ~utilisateur/.ssh/authorized_keys*
        ~utilisateur/.shosts
