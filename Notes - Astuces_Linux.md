@@ -68,7 +68,7 @@ Afficher directement la table des processus et les variables système du noyau
 NB: pgrep fonctionne comme pkill mais n'affiche que les PID
 
 - Analyser la mémoire vive et afficher les stats
-      $ vmstat
+      ```$ vmstat```
 
 ###  Gérer les ressources systèmes par process
 - Limiter le nombre max de fichiers à utliser par un processus
@@ -82,26 +82,34 @@ NB: pgrep fonctionne comme pkill mais n'affiche que les PID
 NB: En cas d'une auth par clé, l'utilisateur peut effectuer par contre une redirection ssh pour se connecter. Par exeple:
       ```$ ssh -f -N -L8000:priv.intranet.server.com:80 ancien.server.com```
 - Supprimer alors les fichiers ci-dessous s'ils existent et empêcher le d'utiliser sa clé ssh.
+      ```
        ~utilisateur/.ssh/authorized_keys*
        ~utilisateur/.shosts
        ~utilisateur/.rhosts
+     ```
 - Vérifier si l'utilisateur avait un compte sudo
-      $ visudo
+      ```$ visudo```
 -  Vérifier si l'utilisateur avait des tâches cron ou at ou était en cours d'exécuter un processus
+   ```
       $ crontab -u utilisateur -e
       $ atq
       $ ps aux | grep -i ^utilisateur
       $ skill -KILL utilisateur
+   ```
 - Pourrait-il exécuter des programmes cgi? Quid de PHP ou autres langages?
+   ```
       $ find ~utilisateur/public_html/ -perm +111
       $ find ~utilisateur/public_html/ -name '*.php*'
+   ```
 - Avait il configuré la redirection de mail?
+   ```
       $ less ~utilisateur/.forward
       $ grep -C utilisateur /etc/mail/aliases
+   ```
 - Est-il propriétaire de fichiers dans d'autres emplacements?
-      $ find -user utilisateur > ~root/utilisateur-files.report
+      ```$ find -user utilisateur > ~root/utilisateur-files.report```
 - Une manière sûre et rapide de s'assurer que tous les fichiers de l'utilisateur sont invalidés est de réaliser un mv
-        $ mv /home/utilisateur /home/utilisateur.supprime
+        ```$ mv /home/utilisateur /home/utilisateur.supprime```
 
 ###  Utiliser un système de fichier *tmpfs* pour le répertoire */tmp*
 - Le système de fichiers tmpfs permet de monter des répertoires en mémoire virtuelle, cela est particulièrement intéressant pour le répertoire /tmp car accessible par tous.
@@ -121,26 +129,30 @@ NB: En cas d'une auth par clé, l'utilisateur peut effectuer par contre une redi
 
 # Sauvegarde
 - Sauvgarder avec tar sur SSH
-      $ tar zcvf - /home | ssh pinky "cat > inky-home.tgz"
+      ```$ tar zcvf - /home | ssh pinky "cat > inky-home.tgz"```
 - Utiliser rsync sur SSH
-      ~# rsync -ave ssh greendome:/home/ftp/pub/ /home/ftp/pub/
+      ```~# rsync -ave ssh greendome:/home/ftp/pub/ /home/ftp/pub/```
 - Archiver avec Pax
   PAX peut créer une archive tar comme une archive cpio
 
 # Firewall Iptables
 #### Masquerade IP simple
 - masquerade (NAT): 2 lignes suffisent
+   ```
       # echo "1" > /proc/sys/net/ipv4/ip_forward
       # iptables -t nat -A POSTROUTING -o $EXT_IFACE -j MASQUERADE
-
+   ```
+   
 #### Contre deni-de-service TCP
 - Détection DDoS
-      iptables -t nat -N syn-flood
+      ```iptables -t nat -N syn-flood```
 - Limite de 12 connexions par seconde
+   ```
       iptables -t nat -A syn-flood -m limit --limit 12/s --limit-burst 24  -j RETURN
       iptables -t nat -A syn-flood -j DROP
+   ```
 - Contrôle d'attaque par déni de service
-      iptables -t nat -A PREROUTING -i $EXT_IFACE -d $DEST_IP -p tcp --syn -j syn-flood
+      ```iptables -t nat -A PREROUTING -i $EXT_IFACE -d $DEST_IP -p tcp --syn -j syn-flood```
 ##### Redirection vers un proxy Squid
 - Redirection flux tcp à destination du port 80 vers le proxy
       `iptables -t nat -A PREROUTING -i $INT_IFACE -p tcp --dport 80 -j REDIRECT --to-port 3128`
@@ -155,7 +167,7 @@ NB: En cas d'une auth par clé, l'utilisateur peut effectuer par contre une redi
 # Surveiller des tâches avec watch
 - Utiliser watch pour exécuter répétitivement n'importe quelle commande et afficher les résultats
 - Exple:
-      `  # watch 'ps ax | grep tar'`
+      `# watch 'ps ax | grep tar'`
 
 # Contrôler les fichiers et les sockets ouverts avec lsof
 - Visualiser aisément quels fichiers, répertoires et sockets sont maintenus ouverts par vos processus en cours.
@@ -167,16 +179,16 @@ NB: En cas d'une auth par clé, l'utilisateur peut effectuer par contre une redi
 
 # Obtenir des stats en temps réel
 #### Ntop pour les stats réseaux
-- Grâce à ntop, sachez en permanence qui fait quoi sur votre réseau
+- Grâce à `ntop`, sachez en permanence qui fait quoi sur votre réseau
 
 #### Surveiller le trafic web avec httptop
 - Sachez dans la seconde qui se connecte le plus fréquemment à votre serveur avec httptop
 - Exemple:
-      `$ httptop -f vhost /usr/local/apache/logs/combined-log `
+      `$ httptop -f vhost /usr/local/apache/logs/combined-log`
 #### Tracer des programmes avec strace et ltrace
 - Utilisez les outils strace et ltrace pour vous sortir de situations inextricables
 - Exemple (prog marchepas):
-      `$ strace -o strace-marchepas.log marchepas `
+      `$ strace -o strace-marchepas.log marchepas`
 
 # Utilisation SSH
 #### Ouvrir une session en mode turbo
@@ -196,18 +208,22 @@ NB: En cas d'une auth par clé, l'utilisateur peut effectuer par contre une redi
 #### Transfert e ports sur SSH
 - Sécuriser le trafic de réseau vers des ports arbitraires avec le transfert de port SSH (tunnel SSH)
 - Exemple:
+        ```
         $ ssh -f -N -L110:serveur-message:110 -l utilisateur serveur-message
 
         # Autoriser d'autres clients à se connecter au port transféré
         $ ssh -f -g -N -L8000:localhost:80 10.42.4.6
+       ```
 
 # Télécharger et convertir des images
 - Récupérer des images dépuis Internet et suvegarder-ler sous d'autres formats
 - Exemples:
+     ```
         $ curl http://lien/images.jpg | convert -img.png
         $ wget -O - http://lien/images.jpg | convert -img.png
         # Afficher l'image
         $ display img.png
+     ```
 - NB: CURL et WGET le proxy également
         `$ curl -x nom_ou_address_proxy_http[:port] [-U identifiant[:mot_de_passe]] ...`
 
@@ -229,9 +245,10 @@ NB: En cas d'une auth par clé, l'utilisateur peut effectuer par contre une redi
         `$ psbook source.ps | psnup -2 | psset -t | psselect -o | lpr`
 #### Convertir vos PostScript
 - Créer un cachier à partir d'un doc qui n'est pas au format PostScript -> convertir
+   ```
       # sysntaxe :
       $ commande_de_conversion | commande_impression
-
+   ```
 - NB commande_de_conversion:
       # pdf to PostScript
       `$ pdftops source.pdf - `
