@@ -29,7 +29,7 @@ shell for Linux, macOS, and the rest of the family
 
 ## Network
 - [GNS3](https://www.gns3.com/) : Build, Design and Test your network in a risk-free virtual environment and access the largest networking community to help
-- [Packet tracert]
+- [Packet tracert](https://www.netacad.com/fr/courses/packet-tracer) : Cisco network simulator
 - [Wireshark](https://www.wireshark.org/) : Wireshark is the world’s foremost and widely-used network protocol analyzer
 - [Pfsense](https://www.pfsense.org/) : The pfSense project is a free network firewall distribution, based on the FreeBSD operating system with a custom kernel and including third party free software packages for additional functionality
 
