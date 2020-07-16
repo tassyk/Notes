@@ -227,6 +227,25 @@ Deux logins sont disponibles dès l'installation :
 
 L'accès à la partie administration se fait à l'URL : http://votre-serveur/admin.php
 
+## Quelques notes sur la commande psql
+Voici quelques commandes utiles de psql pour manipuler une base de données :
+- Se connceter à la base de données `variation` en tant que utilisateur `varaiation`:
+```
+psql -h localhost -U variation variation
+```
+- Lister les bases de données
+```
+variation=> \list
+```
+- Se connceter à la base de données variation
+```
+variation-> \c variation;
+```
+- Lister les tables de variation
+```
+\dt
+```
+
 ## Liens
 - Programme Variation:
   - produits : https://www.variation.fr/
@@ -239,7 +258,9 @@ L'accès à la partie administration se fait à l'URL : http://votre-serveur/adm
   - Tutos apache: https://www.microlinux.fr/apache-centos-7/
   - Tutoss Httpd mod rewrite: https://devops.ionos.com/tutorials/install-and-configure-mod_rewrite-for-apache-on-centos-7/
   - Tutos postgresql:
-  - https://www.hostinger.com/tutorials/how-to-install-postgresql-on-centos-7/
-  - https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-7
+    - https://www.hostinger.com/tutorials/how-to-install-postgresql-on-centos-7/
+    - https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-7
+    - https://chartio.com/resources/tutorials/how-to-list-databases-and-tables-in-postgresql-using-psql/
   - Security postgresql: https://severalnines.com/database-blog/how-secure-your-postgresql-database-10-tips
   - Tutos PHP 7: https://linuxize.com/post/install-php-7-on-centos-7/
+
