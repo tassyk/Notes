@@ -90,7 +90,7 @@ max_file_uploads = 50
 Pour installer la base de données PostgreSQL, nous allons procéder comme suite:
 1. Installer **postgresql postgresql-contrib** avec la commande suivante:
 ```
-sudo install -y postgresql-server postgresql postgresql-contrib
+sudo yum install -y postgresql-server postgresql postgresql-contrib
 ```
 - **/var/lib/pgsql/data/pg_hba.conf** est le fichier de configuration
 - **/var/lib/pgsql/initdb.log** est le fichier de log après Initialisation de la base.
