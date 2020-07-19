@@ -92,14 +92,17 @@ Pour installer la base de données PostgreSQL, nous allons procéder comme suite
 ```
 sudo yum install -y postgresql-server postgresql postgresql-contrib
 ```
-- **/var/lib/pgsql/data/pg_hba.conf** est le fichier de configuration
+> Attention : les paquets peuvent provenir des dépôts `base ou updates` de centos. Si c'est le cas, désactiver-les et réinstaller les paquets
+
+- **/var/lib/pgsql/10/data/pg_hba.conf** est le fichier de configuration
 - **/var/lib/pgsql/initdb.log** est le fichier de log après Initialisation de la base.
+
 
 2. Initialiser et démarrer la base de données
 ```
-sudo postgresql-setup initdb
+sudo /usr/pgsql-10/bin/postgresql-10-setup initdb
 ```
-3. Editer le fichier **/var/lib/pgsql/data/pg_hba.conf** et remplacer **indent** par **md5** comme suite pour autoriser la connexion à la base de données par un mot de passe.
+3. Editer le fichier **/var/lib/pgsql/10/data/pg_hba.conf** et remplacer **indent** par **md5** comme suite pour autoriser la connexion à la base de données par un mot de passe.
 ```
 ...
 host    all             all             127.0.0.1/32            md5
@@ -107,7 +110,7 @@ host    all             all             127.0.0.1/32            md5
 host    all             all             ::1/128                 md5
 ...
 ```
-4. Editer le fichier **sudo vi /var/lib/pgsql/data/postgresql.conf** et definir les adresses d'écoute:
+4. Editer le fichier **sudo vi /var/lib/pgsql/10/data/postgresql.conf** et definir les adresses d'écoute:
 ```
 # Ecouter sur des ip spécifiques
 listen_addresses = 'localhost, my_ip'
@@ -116,8 +119,8 @@ listen_addresses = '*'
 ```
 5. Démarrer le service postgresql
 ```
-sudo systemctl start postgresql
-sudo systemctl enable postgresql
+sudo systemctl start postgresql-10
+sudo systemctl enable postgresql-10
 ```
 6. Créer un utilisateur de la base de données de l'application
 ```
@@ -261,6 +264,6 @@ variation-> \c variation;
     - https://www.hostinger.com/tutorials/how-to-install-postgresql-on-centos-7/
     - https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-centos-7
     - https://chartio.com/resources/tutorials/how-to-list-databases-and-tables-in-postgresql-using-psql/
+    - [Upgrade postgresql](https://fojta.wordpress.com/2019/02/11/upgrade-postgresql-version-9-to-10/)
   - Security postgresql: https://severalnines.com/database-blog/how-secure-your-postgresql-database-10-tips
   - Tutos PHP 7: https://linuxize.com/post/install-php-7-on-centos-7/
-
