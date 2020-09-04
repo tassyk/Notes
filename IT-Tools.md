@@ -6,6 +6,17 @@ Création: 15/05/2020
 ---
 
 # IT Tools
+---
+**Sommaire**
+
+- **[System](#System)**
+  - [Monitoring](#Monitoring)
+  - [DevOps](#DevOps)
+  - [Network](#Network)
+  - [Virtualization](#Virtualization)
+  - [Productivity](#Productivity)
+- **[Liens](#Liens)**
+---
 
 ## System
 - [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/blob/master/README.md) : open source, community-driven framework for managing your `zsh` configuration
@@ -13,6 +24,7 @@ Création: 15/05/2020
 shell for Linux, macOS, and the rest of the family
 - [MobaXterm](https://mobaxterm.mobatek.net/) : Pro/Free Enhanced terminal for Windows with X11 server, tabbed SSH client, network tools and much more
 - [Termius](https://termius.com) : Pro/Free SSH client that works on Desktop and Mobile
+- [Advanced Installer](https://www.advancedinstaller.com/features.html) : Advanced Installer simplifies how you package and update your software on Windows
 
 ## Monitoring
 - [CheckMK](https://checkmk.com/) : infrastructure & application monitoring
@@ -33,6 +45,14 @@ shell for Linux, macOS, and the rest of the family
 - [Wireshark](https://www.wireshark.org/) : Wireshark is the world’s foremost and widely-used network protocol analyzer
 - [Pfsense](https://www.pfsense.org/) : The pfSense project is a free network firewall distribution, based on the FreeBSD operating system with a custom kernel and including third party free software packages for additional functionality
 
-## Virtualisation
+## Virtualization
 - [Proxmox](https://www.proxmox.com/en/) : Proxmox VE is a complete open-source platform for enterprise virtualization
--
+
+## Productivity
+- [XMind](https://www.xmind.net/) : XMind, a full-featured mind mapping and brainstorming tool, designed to generate ideas, inspire creativity, brings productivity in a remote WFH team
+- [ShareX](https://getsharex.com/) : Screen capture, file sharing and productivity tool
+- [Snagit](https://www.techsmith.fr/capture-ecran.html) : logiciel de capture et d’enregistrement
+d’écran
+- [Live Share with Visual Studio Code](https://visualstudio.microsoft.com/fr/services/live-share/) : Développement collaboratif en temps réel
+
+## Liens
