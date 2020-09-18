@@ -19,5 +19,12 @@ Sur windows 10 :
 Dans **Information d'identification web**, on retrouve les mots de passe stoqués dans les navigateurs.
 Dans **Information d'identification windows**, on apperoit les mots de passe qui sont stoqués dans les logiciels installés qui proposent une authentification.
 
-> Note : On peut être amené à faire le menage. Mais avant cela, on peut effectuer une sauvegarde des mots de passe en cliquant sur **Sauvegarder les informations d'identification**. 
-Ainsi en cas d'erreur, on peut revenir en arrière à tout moment en les restaurant.
+## Sauvegarde avant suppression
+On peut être amené à faire le menage. Mais avant cela, on peut effectuer une sauvegarde des mots de passe en cliquant sur **Sauvegarder les informations d'identification**. Ainsi en cas d'erreur, on peut revenir en arrière à tout moment en les restaurant.
+
+## Récupération des licences
+Au-delà des identifiants, vous pouvez aussi avoir besoin de récupérer des licences de produits que vous avez achetés ou installés sur votre PC grâce aux logiciels comme **ProduKey**.
+Une fois lancé, vous obtiendre la liste des programmes avec licence. Double-cliquez sur un programme et vous obtenez la clé de produit.
+
+# Source
+- Magazine "HACK & CRACK N°28"
