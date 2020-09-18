@@ -45,7 +45,7 @@ Received-SPF: Pass (protection.outlook.com: domain of mail.n.convertkit.com
 Dans une entête, on peut voir des IP, des serveurs par où est passé le mail jusqu'à arriver à destination.
 Il existe cependant des outils qui facilitent le traçace du mail.
 ### Localisation des IP
-On peut localiser chaque IP contenue dans une entête sur de nombreux sites spécialisés comme [www.iplocation.net](www.iplocation.net), [www.whatismyip.com](www.whatismyip.com).
+On peut localiser chaque IP contenue dans une entête sur de nombreux sites spécialisés comme [www.iplocation.net](www.iplocation.net), ou [www.hostip.fr](https://www.hostip.fr/), ou [www.whatismyip.com](www.whatismyip.com).
 On peut aussi passer ces IP sur des sites comme [VirusTotal](https://www.virustotal.com/gui/home/search) ou [AbuseIPDB](https://www.abuseipdb.com/) pour vérifier si elles ne sont pas malveillantes ou blacklistées.
 
 ### Extraction des informations de l'entête
