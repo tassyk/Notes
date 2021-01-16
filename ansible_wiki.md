@@ -1,30 +1,29 @@
 Utilisation d'Ansible
 =====================
-<table id="toc" class="toc"><tbody><tr><td><div id="toctitle">
 
+---
 ## Sommaire
-*   [<span class="tocnumber">1</span> <span class="toctext">Introduction</span>](#Introduction)
-*   [<span class="tocnumber">2</span> <span class="toctext">Préambule</span>](#Préambule)
-*   [<span class="tocnumber">3</span> <span class="toctext">Installation d'Ansible</span>](#Installation d'Ansible)
-*   [<span class="tocnumber">4</span> <span class="toctext">Inventaire des serveurs</span>](#Inventaire_des_serveurs)
-*   [<span class="tocnumber">5</span> <span class="toctext">Exécution d'actions sur les machines</span>](#Exécution_d'actions_sur_les_machines)
-    *   [<span class="tocnumber">5.1</span> <span class="toctext">Ansible en ligne de commande</span>](#Ansible_en_ligne_de_commande)
-    *   [<span class="tocnumber">5.2</span> <span class="toctext">Scripts Ansible: les Playbooks</span>](#Scripts_Ansible_:_les_Playbooks)
-        *   [<span class="tocnumber">5.2.1</span> <span class="toctext">Structure d'un playbook</span>](#Structure_d'un_playbook)
-        *   [<span class="tocnumber">5.2.2</span> <span class="toctext">Exécution d'un playbook</span>](#Exécution_d'un_playbook)
-    *   [<span class="tocnumber">5.3</span> <span class="toctext">Roles Ansible</span>](#Roles_Ansible)
-    *   [<span class="tocnumber">5.4</span> <span class="toctext">Création d'un rôle</span>](#Création_d'un_rôle)
-    *   [<span class="tocnumber">5.5</span> <span class="toctext">Exemple de rôle</span>](#Exemple_de_rôle)
-    *   [<span class="tocnumber">5.6</span> <span class="toctext">Exécution du rôle</span>](#Exécution_du_rôle)
-*   [<span class="tocnumber">6</span> <span class="toctext">Variables</span>](#Variables)
-    *   [<span class="tocnumber">6.1</span> <span class="toctext">Types de variables</span>](#Types_de_variables)
-    *   [<span class="tocnumber">6.2</span> <span class="toctext">Utilisation des variables</span>](#Utilisation_des_variables)
-*   [<span class="tocnumber">7</span> <span class="toctext">Templates</span>](#Templates)
-    *   [<span class="tocnumber">7.1</span> <span class="toctext">Quelques syntaxes jinja</span>](#Quelques_syntaxes_jinja)
-    *   [<span class="tocnumber">7.2</span> <span class="toctext">Exemples de templates</span>](#Exemples_de_templates)
-    *   [<span class="tocnumber">7.3</span> <span class="toctext">Utilisation des templates</span>](#Utilisation_des_templates)
-
-</td></tr></tbody></table>
+*   [Introduction](#Introduction)
+*   [Préambule](#Préambule)
+*   [Installation d'Ansible](#Installation d'Ansible)
+*   [Inventaire des serveurs](#Inventaire_des_serveurs)
+*   [Exécution d'actions sur les machines](#Exécution_d'actions_sur_les_machines)
+    *   [Ansible en ligne de commande](#Ansible_en_ligne_de_commande)
+    *   [Scripts Ansible: les Playbooks</span>](#Scripts_Ansible_:_les_Playbooks)
+        *   [Structure d'un playbook](#Structure_d'un_playbook)
+        *   [Exécution d'un playbook](#Exécution_d'un_playbook)
+    *   [Roles Ansible](#Roles_Ansible)
+        *   [Création d'un rôle](#Création_d'un_rôle)
+        *   [Exemple de rôle](#Exemple_de_rôle)
+        *   [Exécution du rôle](#Exécution_du_rôle)
+*   [Variables](#Variables)
+    *   [Types de variables](#Types_de_variables)
+    *   [Utilisation des variables](#Utilisation_des_variables)
+*   [Templates](#Templates)
+    *   [Quelques syntaxes jinja](#Quelques_syntaxes_jinja)
+    *   [Exemples de templates](#Exemples_de_templates)
+    *   [Utilisation des templates](#Utilisation_des_templates)
+---
 
 Introduction
 ------------
