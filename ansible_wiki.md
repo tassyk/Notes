@@ -5,7 +5,7 @@ Utilisation d'Ansible
 ## Sommaire
 *   [<span class="tocnumber">1</span> <span class="toctext">Introduction</span>](#Introduction)
 *   [<span class="tocnumber">2</span> <span class="toctext">Préambule</span>](#Préambule)
-*   [<span class="tocnumber">3</span> <span class="toctext">Installation d'Ansible</span>](#Installation_d'Ansible)
+*   [<span class="tocnumber">3</span> <span class="toctext">Installation d'Ansible</span>](#Installation d'Ansible)
 *   [<span class="tocnumber">4</span> <span class="toctext">Inventaire des serveurs</span>](#Inventaire_des_serveurs)
 *   [<span class="tocnumber">5</span> <span class="toctext">Exécution d'actions sur les machines</span>](#Exécution_d'actions_sur_les_machines)
     *   [<span class="tocnumber">5.1</span> <span class="toctext">Ansible en ligne de commande</span>](#Ansible_en_ligne_de_commande)
