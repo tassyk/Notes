@@ -9,7 +9,7 @@ Utilisation d'Ansible
 *   [Inventaire des serveurs](#Inventaire_des_serveurs)
 *   [Exécution d'actions sur les machines](#Exécution_d'actions_sur_les_machines)
     *   [Ansible en ligne de commande](#Ansible_en_ligne_de_commande)
-    *   [Scripts Ansible: les Playbooks</span>](#Scripts_Ansible_:_les_Playbooks)
+    *   [Script ou Playbooks Ansible](#Script_ou_Playbooks_Ansible)
         *   [Structure d'un playbook](#Structure_d'un_playbook)
         *   [Exécution d'un playbook](#Exécution_d'un_playbook)
     *   [Roles Ansible](#Roles_Ansible)
@@ -162,7 +162,7 @@ commande:
 **Notes**: la liste des module est disponible sur la page [ All modules](https://docs.ansible.com/ansible/2.8/modules/list_of_all_modules.html).
 
 
-### Scripts Ansible: les Playbooks
+### Script ou Playbooks Ansible
 
 Un script Ansible se désigne sous le nom de **Playbook**. Il contient les modules et permet de définir un ensemble de tâches à exécuter sur les machines.
 
