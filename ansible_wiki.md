@@ -5,7 +5,7 @@ Utilisation d'Ansible
 ## Sommaire
 *   [Introduction](#Introduction)
 *   [Préambule](#Préambule)
-*   [Installation d'Ansible](#Installation d'Ansible)
+*   [Installation d'Ansible](#Installation_d'Ansible)
 *   [Inventaire des serveurs](#Inventaire_des_serveurs)
 *   [Exécution d'actions sur les machines](#Exécution_d'actions_sur_les_machines)
     *   [Ansible en ligne de commande](#Ansible_en_ligne_de_commande)
